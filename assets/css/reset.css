@@ -1,0 +1,20 @@
+/* This is Universal and a reset if CSS goes wrong */
+*{
+    
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 120%;
+    margin: auto;
+    padding:0;
+}
+
+button {
+    margin-top: 50px;
+    font-size: 100%;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+
+}
+.front-page {
+    text-align: center;
+}
