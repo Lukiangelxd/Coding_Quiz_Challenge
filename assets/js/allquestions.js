@@ -103,7 +103,6 @@ function render(questionIndex) {
     userChoices.forEach(function (newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;
-        
         ulCreate.appendChild(listItem);
         listItem.addEventListener("click", (compare));
     });
@@ -219,7 +218,7 @@ function allDone() {
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
             // Travels to final page
-            window.location.replace("highscores.html");
+            window.location.replace("highscoreBoard.html");
         }
     });
 
