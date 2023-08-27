@@ -1,0 +1,80 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    background-color: rgb(207, 255, 200);
+}
+
+
+/*This is the empty space to bring the quiz to the center*/
+#wrapper {
+    position: absolute;
+    background-color: rgb(252, 249, 244);
+    left: 30%;
+    top: 20%;
+    width: 500px;
+    height: 500px;
+    border: 5px solid rgb(54, 148, 76);
+}
+
+/*This is the h3 elements on both html pages */
+h3 {
+    text-align: center;
+}
+
+/*This is CSS for all buttons*/
+#startTime {
+    background-color: rgb(41, 169, 10);
+    margin-left: 33%;
+    padding: 15px 32px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+#goBack {
+    background-color: rgb(41, 169, 10);
+    position: relative;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    top: 30%;
+    left: 55%;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+#clear {
+    background-color: rgb(41, 169, 10);
+    position: relative;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    top: 30%;
+    right: 5%;
+    text-align: center;
+    cursor: pointer;
+}
+#Submit {
+    background-color: rgb(41, 169, 10);
+    margin-left: 33%;
+    padding: 15px 32px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+#viewhighscore {
+    background-color: rgb(252, 249, 244);
+    font-size: 25px;
+    border: 1px solid rgb(54, 148, 76);
+}
+button {
+    border-radius: 8px;
+}
+
+
+#questionsDiv {
+    margin: 20px;
+}
+
+#currentTime {
+    float: right;
+}
