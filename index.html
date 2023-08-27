@@ -1,65 +1,38 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
-<!--Title and Head Section-->
+<html lang="en">
+<!--Front page html of the quiz-->
 <head>
-    <meta charset="UTF-8" />
-    <meta name = "viewport" content = "width=device-width, initial-scale=1"/>
-    <Title>Coding Quiz Challenge</Title>
-    <link rel = "stylesheet" href = "assets/css/reset.css" />
-    <link rel = "stylesheet" href = "assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <link rel="stylesheet" type="CSS" href="assets/css/style.css">
+    <title>The Coding Quiz Challenge</title>
 </head>
 
 <body>
-    <header>
-<!--There is a Timer that will count down from 60 once the quiz starts-->
-<!--The oneclick will take user to see the Leaderboard from localStorage-->
-    <nav>
-        <a oneclick = "showleaderboard()">See Leaderboard...</a>
-        <div id="timer">Timer:</div>
-    </nav>
-    </header>
-
-    <main>
-<!--Introduction Page before the Quiz-->
-        <section>
-        <div class ="front-page">
+    <!-- Link to highscores page -->
+    <a href="HighScores.html" id="viewhighscore">View Highscores</a>
+    <!-- This is a wrapper to bring the quiz down to be a bit centered-->
+    <div id="wrapper">
+        <!--Timer-->
+        <div id="currentTime"></div>
+        <!-- Div for quiz content -->
+        <div id="questionsDiv">
             <h1>Welcome to the Coding Quiz Challenge!</h1>
-           <p>Use your skills that you have acquired throughout your Coding journey on this quiz! There are 10 tricky questions with 60 seconds on the clock! Have Fun!</p>
-           <button id = "showQuizbtn">Show Quiz!</button>
+            <h3>In this quiz there are 10 questions that are related to HTML, CSS and Javascript. Incorrect answers will affect not only yor score but your time as well! We wish you Good luck!</h3>
+            <ul id="choicesUl"></ul>
+            <!-- Buttons -->
+            <button id="startTime">Start Quiz</button>
         </div>
-        </section>
 
-<!--Quiz Page-->
-        <section>
-        <div id = "quiz" class ="invisible">
-            <p id="all-questions">
-                <ol id="multiple-choice">
-                    <li><button id="answer-1" onclick="check(value)"></button></li>
-                    <li><button id="answer-2" onclick="check(value)"></button></li>
-                    <li><button id="answer-3" onclick="check(value)"></button></li>
-                    <li><button id="answer-4" onclick="check(value)"></button></li>
-                </ol>
-            <div id="correct" class="invisible">That's Right!</div>
-            <div id="incorrect" class="invisible">No, incorrect.</div>
-            </p>
-        </div>
-        </section>
-<!--Highscore page-->
-        <section>
-            <div id="Highscore-input" class="hidden">
-                <p>Congratulations! Your score is<span id ="highscore"></span>out of 100 possible points!</p>
-                <div>Type in Name Below:</div>
-                <input type="text" id="name-input">
-                <button onclick="submitScore()">Submit your score!</button>
-            </div>
-        </section>
+    </div>
 
 
-    </main>
+    <script src="assets/js/allquestions.js"></script>
+ 
 
-    <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>
