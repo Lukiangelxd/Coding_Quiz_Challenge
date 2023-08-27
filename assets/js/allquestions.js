@@ -96,16 +96,18 @@ function render(questionIndex) {
         // Appends question title only
         var userQuestion = questions[questionIndex].title;
         var userChoices = questions[questionIndex].choices;
+
         questionsDiv.textContent = userQuestion;
     }
     // New for each for question choices
     userChoices.forEach(function (newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;
-        questionsDiv.appendChild(ulCreate);
+        
         ulCreate.appendChild(listItem);
         listItem.addEventListener("click", (compare));
-    })
+    });
+    questionsDiv.appendChild(ulCreate);
 }
 // Event to compare choices with answer
 function compare(event) {
@@ -160,7 +162,7 @@ function allDone() {
 
     questionsDiv.appendChild(createP);
 
-    // Calculates time remaining and replaces it with score
+    // Calculates percentage and replaces it with score
     if (secondsLeft >= 0) {
         var timeRemaining = secondsLeft;
         var createP2 = document.createElement("p");
@@ -217,7 +219,7 @@ function allDone() {
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
             // Travels to final page
-            window.location.replace("./HighScores.html");
+            window.location.replace("highscores.html");
         }
     });
 
