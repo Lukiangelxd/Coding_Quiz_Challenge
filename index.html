@@ -5,34 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <link rel="stylesheet" type="CSS" href="assets/css/style.css">
     <title>The Coding Quiz Challenge</title>
 </head>
 
 <body>
     <!-- Link to highscores page -->
-    <a href="HighScores.html" id="viewhighscore">View Highscores</a>
+    <a href="highscoreBoard.html" id="viewhighscore">View Highscores</a>
     <!-- This is a wrapper to bring the quiz down to be a bit centered-->
     <div id="wrapper">
         <!--Timer-->
         <div id="currentTime"></div>
-        <!-- Div for quiz content -->
+        <!--Quiz div-->
         <div id="questionsDiv">
             <h1>Welcome to the Coding Quiz Challenge!</h1>
             <h3>In this quiz there are 10 questions that are related to HTML, CSS and Javascript. Incorrect answers will affect not only yor score but your time as well! We wish you Good luck!</h3>
             <ul id="choicesUl"></ul>
-            <!-- Buttons -->
+            <!--Start Button -->
             <button id="startTime">Start Quiz</button>
         </div>
-
     </div>
-
-
     <script src="assets/js/allquestions.js"></script>
- 
-
-
 </body>
-
 </html>
