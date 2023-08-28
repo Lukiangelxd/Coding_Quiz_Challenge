@@ -103,7 +103,6 @@ function render(questionIndex) {
     userChoices.forEach(function (newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;
-        
         ulCreate.appendChild(listItem);
         listItem.addEventListener("click", (compare));
     });
@@ -167,7 +166,7 @@ function allDone() {
         var timeRemaining = secondsLeft;
         var createP2 = document.createElement("p");
         clearInterval(holdInterval);
-        createP.textContent = "Your final score is: " + timeRemaining;
+        createP.textContent = "Your final score is: " + percentage + "%";
 
         questionsDiv.appendChild(createP2);
     }
@@ -219,7 +218,7 @@ function allDone() {
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
             // Travels to final page
-            window.location.replace("highscores.html");
+            window.location.replace("highscoreBoard.html");
         }
     });
 
