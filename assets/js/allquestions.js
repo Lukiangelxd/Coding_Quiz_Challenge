@@ -166,7 +166,7 @@ function allDone() {
         var timeRemaining = secondsLeft;
         var createP2 = document.createElement("p");
         clearInterval(holdInterval);
-        createP.textContent = "Your final score is: " + timeRemaining;
+        createP.textContent = "Your final score is: " + percentage + "%";
 
         questionsDiv.appendChild(createP2);
     }
